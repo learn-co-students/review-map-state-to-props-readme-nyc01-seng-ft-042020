@@ -9,13 +9,13 @@ class App extends Component {
     this.props.store.dispatch({
       type: 'GET_COUNT_OF_ITEMS',
     });
-  }
+  };
 
   handleOnClickUsers() {
     this.props.store.dispatch({
       type: 'GET_COUNT_OF_USERS',
     });
-  }
+  };
 
   render() {
     // debugger;
@@ -30,12 +30,12 @@ class App extends Component {
           <p>{this.props.items.length}</p>
       </div>
     );
-  }
-}
+  };
+};
 
 const mapStateToProps = (state) => {
   debugger;
   return { items: state.items }
-}
+};
 
 export default connect(mapStateToProps)(App);
